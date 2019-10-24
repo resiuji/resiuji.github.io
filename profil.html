@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>profil</title>
+  <link rel="stylesheet" href="profil.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+ <div class="topnav">
+   <a href="home.html"> <font color="red";font-family="san-serif";font-size="24pt">CheapTravel</font></a>
+   <a href="about.html">Tentang</a>
+   <a href="kontak.html">Kontak</a>
+   <a href="bantuan.html">Bantuan</a>
+   <div class="search-container">
+    <form action="/action_page_php">
+	<input type="text" placeholder="search.." name="search">
+	<button type="submit"><i class="fa fa-search"></i></button>
+	</form>
+   </div>
+  </div>
+
+ <div class="nav">
+   <a href="home.html">Beranda</a>
+   <a href="pakettour.html">Paket Tour</a>
+   <a href="Hotel1.html">Hotel</a>
+   <a href="Pesawat1.html">Pesawat</a>
+   <div class="navbar">
+      <button type="LOGOUT"><a href="home.html">LOG OUT</a></button>
+   </div>
+ </div>
+
+<div class="container">
+<ul class="breadcrumb">
+  <a href="home.html">Home/</a>
+  <a class="active">Dashboard/</a>
+  <a class="active">Pengaturan profil/</a>
+</ul>
+</div>
+
+
+<div class="container dashboard profile-settings">
+<div class="row">
+<div class="col-md-3 no-padding">
+        
+<div class="user-settings">
+<div class="row user-info">
+  <div class="col-xs-7 col-md-12">
+    <div class="avatar text-center">
+      <a href="profil.html"><img src="gambar profil.png" alt="Indah  Tambunan" style="float:right;width:50px;height:40px;"></a>
+    </div>
+    <div class="name">
+    <a href="profil.html">Indah  Tambunan</a>
+    </div>
+  </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+      
+        <div class="menu-dashboard">
+            <div class="collapse navbar-collapse" id="menu-dashboard">
+                <nav>
+                    <ul class="menu-profil">
+                       <li><a>Riwayat Pesanan</a></li>
+                       <li><a>Daftar Penumpang</a></li>
+                       <li><a>Pengaturan Akun</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+    
+<div class="col-md-9 no-padding" style="border-left:1px solid blue">
+  <div class="panel panel-default" style="background: blue;">
+    <div class="panel-heading">
+      <span class="title">Pengaturan profil</span>
+</div>
+    
+  <div class="panel-body">
+    <div class="row">
+    <div class="col-xs-12">
+      <form id="profile-form">
+        <input type="hidden" name="_csrf" >                            
+        <div class="row">
+        <div class="col-xs-4">
+        <div class="gelar">
+          <label class="control-label">Gelar</label>
+          <input type="hidden" name="Profile[title_id]" value=""><div id="profile-title_id" aria-required="true"><label><input type="radio" name="Profile[title_id]" value="1"> Mr.</label>
+          <label><input type="radio" name="Profile[title_id]" value="2"> Mrs.</label>
+          <label><input type="radio" name="Profile[title_id]" value="3"> Ms.</label>
+          <label><input type="radio" name="Profile[title_id]" value="4"> Mstr.</label>
+          <label><input type="radio" name="Profile[title_id]" value="5"checked> Miss.</label></div>
+            
+        <div class="help-block"></div>
+        </div>
+        </div>
+
+  <div class="col-xs-4">
+  <div class="form-group label-floating field-profile-first_name required">
+      <div class="col-xs-4">
+          <div class="form-group label-floating field-profile-first_name required">
+            <table>
+            <tr>
+                <td><label class="control-label" for="nama depan">Nama depan</label></td>
+                <td>:</td>
+                <td><input type="text" id="profile-first_name" class="form-control" name="Profile[nama depan]" value="Indah " maxlength="50%" aria-required="true"></td>
+                <td><label class="control-label" for="profile-last_name">Nama belakang</label></td>
+                <td>:</td>
+                <td><input type="text" id="profile-last_name" class="form-control" name="Profile[last_name]" value="Tambunan" maxlength="100" aria-required="true"></td>
+            </tr>
+            <tr>
+                <td><label class="control-label" for="profile-main_phone">Main phone</label></td>
+                <td>:</td>
+                <td><input type="text" id="profile-main_phone" class="form-control" name="Profile[main_phone]" maxlength="50" aria-required="true"></td>
+                <td><label class="control-label" for="profile-city">Kota</label></td>
+                <td>:</td>
+                <td><input type="text" id="profile-city" class="form-control" name="Profile[city]" value="" maxlength="100"><td>
+            </tr>
+            <tr>
+                <td><label class="control-label" for="profile-postal_code">Kode pos</label></td>
+                <td>:</td>
+                <td><input type="text" id="profile-postal_code" class="form-control" name="Profile[postal_code]" value="" maxlength="25"></td>
+                <td><label class="control-label" for="profile-address">Alamat</label></td>
+                <td>:</td>
+                <td><input type="text" class="form-control" name="Profile[address]" maxlength="255"></td>
+            </tr>
+            </table>   
+        <div class="help-block"></div>
+        </div>                                
+        </div>
+        
+        <div class="button" style="text-decoration-color: white;">
+        <button type="submit" style="background: coral; text-decoration-color: white; float: right;">Simpan</button><br>
+        </div>
+        </div>
+        </div>
+        
+        </body>
+        </html>

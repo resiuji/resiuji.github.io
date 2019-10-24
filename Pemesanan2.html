@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Paket Tour</title>
+ <link rel="stylesheet" href="Pemesanan2.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+ <div class="topnav">
+   <a href="home.html"> <font color="red">CheapTravel</font></a>
+   <a href="about.html">Tentang</a>
+   <a href="kontak.html">Kontak</a>
+   <a href="bantuan.html">Bantuan</a>
+   <div class="search-container">
+    <form action="/action_page.php">
+      <input type="text" placeholder="Search.." name="search">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+  </div>
+ </div>
+ <div class="nav">
+   <a href="home.html">Beranda</a>
+   <a href="pakettour.html">Paket Tour</a>
+   <a href="Hotel1.html">Hotel</a>
+   <a href="Pesawat1.html">Pesawat</a>
+ </div>
+
+  <h1><center>3D 2N Jogja Solo Tour</center></h1>
+
+  <div class="col-12">
+
+    <img src="jogja.jpg" alt="jogja" width="50%" height="50%">
+
+    <div class="tab">
+    <button class="tablinks" onclick="Data(event, 'ringkasan')" id="defaultOpen">Ringkasan Tour</button>
+    <button class="tablinks" onclick="Data(event, 'itinerary')">Itinenary</button>
+    </div>
+
+    <div id="ringkasan" class="tabcontent">
+    <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+    <h3>Deskripsi Ringkas</h3>
+    <p>Anda akan diajak mengunjungi salah satu keajaiban dunia yaitu Candi Borobudur, melihat proses membatik, mengunjungi kota Gede, melihat pembuatan perak, check-in hotel</p>
+    <h3>Rute Perjalanan</h3>
+    Hari 1: Transfer In - Borobudur - Kota Gede <br>
+    Hari 1: Prambanan - Solo City Tour - Laweyan <br>
+    Hari 1: Transfer Out
+    </div>
+
+    <div id="itinerary" class="tabcontent">
+    <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+    </div>
+  </div>
+
+  <div class="col-12">
+    <p>Keberangkatan 20 September 2019 - 22 September 2019</p>
+    <p>Harga Paket</p>
+    Mulai dari Rp 2.167.000,00
+    <center><button class="pesan">Pesan Sekarang</button></center>
+  </div>
+
+<script>
+function Data(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+  }
+
+  // Get the element with id="defaultOpen" and click on it
+  document.getElementById("defaultOpen").click();
+</script>
+
+</body>
+</html>
