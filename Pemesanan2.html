@@ -57,13 +57,13 @@
   <div class="col-12">
     <p>Keberangkatan 20 September 2019 - 22 September 2019</p>
     <p>Harga Paket</p>
-    <center><button class="pesan">Pesan Sekarang</button></center>
+    Mulai dari Rp 2.167.000,00
+    <center><button type="button">Pesan Sekarang</button></center>
   </div>
 
   <div id="box">
 
   </div>
-  <button type="button">Load Content</button>
 
 
 <script>
@@ -86,7 +86,7 @@ function Data(evt, cityName) {
 
   $(document).ready(function(){
       $("button").click(function(){
-          $("#box").load("ajax.html", function(responseTxt, statusTxt, jqXHR){
+          $("#box").load("formpesan.html", function(responseTxt, statusTxt, jqXHR){
               if(statusTxt == "success"){
                   alert("New content loaded successfully!");
               }
