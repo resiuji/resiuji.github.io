@@ -60,6 +60,10 @@
     <center><button class="pesan">Pesan Sekarang</button></center>
   </div>
 
+  <div id="box">
+
+  </div>
+
 <script>
 function Data(evt, cityName) {
   var i, tabcontent, tablinks;
@@ -77,6 +81,19 @@ function Data(evt, cityName) {
 
   // Get the element with id="defaultOpen" and click on it
   document.getElementById("defaultOpen").click();
+
+  $(document).ready(function(){
+      $("pesan").click(function(){
+          $("#box").load("formpesan.html", function(responseTxt, statusTxt, jqXHR){
+              if(statusTxt == "success"){
+                  alert("New content loaded successfully!");
+              }
+              if(statusTxt == "error"){
+                  alert("Error: " + jqXHR.status + " " + jqXHR.statusText);
+              }
+          });
+      });
+  });
 </script>
 
 </body>
