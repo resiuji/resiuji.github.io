@@ -6,8 +6,8 @@
  <link rel="stylesheet" href="Pemesanan2.css">
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
  <script src="jquery-3.4.1.min.js"></script>
- <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" /> -->
+ <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script> -->
+ <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" /> -->
 </head>
 <body>
 
@@ -60,7 +60,7 @@
     <p>Keberangkatan 20 September 2019 - 22 September 2019</p>
     <p>Harga Paket</p>
     Mulai dari Rp 2.167.000,00
-    <center><button type="button" class="pesan" id="manual-ajax">Pesan</button></center>
+    <center><a href="formpesan.html" rel="modal:open" id="manual-ajax"><button type="button" class="pesan">Pesan</button></a></center>
     <div class="modal">
 
     </div>
@@ -88,35 +88,15 @@ function Data(evt, cityName) {
   // Get the element with id="defaultOpen" and click on it
   document.getElementById("defaultOpen").click();
 
-//   $('#manual-ajax').click(function(event) {
-//   event.preventDefault();
-//   this.blur(); // Manually remove focus from clicked link.
-//   $.get(this.href, function(html) {
-//     $(html).appendTo('body').modal();
-//   });
-// });
-// $("#fade").modal({
-//  fadeDuration: 100
-// });
-
-$.post("formpesan.html", function(data){
-
-    $("#modal").html(data).fadeIn();
-
+  $('#manual-ajax').click(function(event) {
+  event.preventDefault();
+  this.blur(); // Manually remove focus from clicked link.
+  $.get(this.href, function(html) {
+    $(html).appendTo('body').modal();
+  });
 });
-
-$(document).ready(function(){
-
-    $('#manual-ajax').on("click", function(){
-
-      $.post("formpesan.html", function(data){
-
-          $("#modal").html(data).fadeIn();
-
-      });
-
-    });
-
+$("#fade").modal({
+ fadeDuration: 100
 });
 
 </script>
